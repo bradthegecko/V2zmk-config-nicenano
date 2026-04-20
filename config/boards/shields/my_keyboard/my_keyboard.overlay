@@ -14,7 +14,6 @@
         compatible = "zmk,matrix-transform";
         columns = <1>;
         rows = <1>;
-        /* Using the raw index 0 directly to bypass the "RC" macro conflict */
         map = <0>; 
     };
 
@@ -30,6 +29,9 @@
 
 &i2c0 {
     status = "okay";
+    /* These two lines set your custom pins */
+    scl-pin = <11>;
+    sda-pin = <10>;
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
