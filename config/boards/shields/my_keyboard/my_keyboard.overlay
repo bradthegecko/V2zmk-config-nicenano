@@ -11,7 +11,8 @@
         compatible = "zmk,matrix-transform";
         columns = <2>;
         rows = <1>;
-        bindings = <
+        /* Changed 'bindings' to 'map' to fix the build error */
+        map = <
             RC(0,0) RC(0,1)
         >;
     };
@@ -53,7 +54,8 @@
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
-        label = "DISPLAY";
+        /* Label is deprecated but fine to keep; the build error was 'map' */
+        label = "DISPLAY"; 
         width = <128>;
         height = <64>;
         segment-offset = <0>;
