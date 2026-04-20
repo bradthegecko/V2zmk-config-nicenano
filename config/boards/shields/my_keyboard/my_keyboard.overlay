@@ -14,8 +14,8 @@
         compatible = "zmk,matrix-transform";
         columns = <1>;
         rows = <1>;
-        /* Using standard Row/Column coordinates directly */
-        map = <RC(0,0)>; 
+        /* Using the raw index 0 directly to bypass the "RC" macro conflict */
+        map = <0>; 
     };
 
     kscan0: kscan {
