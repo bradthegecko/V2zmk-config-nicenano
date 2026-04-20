@@ -9,7 +9,8 @@
 
         default_layer {
             bindings = <
-                &bt BT_CLR_ALL
+                &bt BT_CLR_ALL    // Clears Bluetooth bonds
+                &ext_power EP_ON  // Forces VCC to 3.3V
             >;
         };
     };
